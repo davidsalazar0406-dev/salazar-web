@@ -1,153 +1,1070 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="google-site-verification" content="T8w-zTjvaAc0m0452BaddeapV_9-AzkuyqzAyRFN84o" />
 
+  <title>SALAZAR | Sudaderas Premium 2026</title>
+  <meta name="description" content="SALAZAR: sudaderas premium bordadas. Colección Mundial 2026, Classic y Limited." />
+  <link rel="icon" href="imagenes/logo-simbolo.png" />
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;700;800;900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
 
-  <link rel="stylesheet" href="styles.css">
+  <style>
+    :root {
+      --black: #030303;
+      --dark: #090909;
+      --card: #111111;
+      --card-2: #171717;
+      --gold: #d4af37;
+      --white: #ffffff;
+      --soft: #c8c8c8;
+      --muted: #8f8f8f;
+      --line: rgba(255, 255, 255, 0.10);
+      --shadow: 0 25px 80px rgba(0, 0, 0, 0.55);
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: 'Montserrat', sans-serif;
+      background: var(--black);
+      color: var(--white);
+      overflow-x: hidden;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    img {
+      width: 100%;
+      display: block;
+    }
+
+    .container {
+      width: min(1160px, 88%);
+      margin: 0 auto;
+    }
+
+    .navbar {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      z-index: 1000;
+      padding: 18px 0;
+      background: rgba(3, 3, 3, 0.70);
+      backdrop-filter: blur(18px);
+      border-bottom: 1px solid var(--line);
+    }
+
+    .nav-inner {
+      width: min(1160px, 88%);
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 24px;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+    }
+
+    .logo img {
+      width: 48px;
+      height: 48px;
+      object-fit: contain;
+    }
+
+    .logo span {
+      font-size: 21px;
+      font-weight: 900;
+      letter-spacing: 5px;
+    }
+
+    .menu {
+      list-style: none;
+      display: flex;
+      gap: 28px;
+      align-items: center;
+    }
+
+    .menu a {
+      font-size: 12px;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 1.3px;
+      color: rgba(255, 255, 255, 0.78);
+      transition: 0.3s ease;
+    }
+
+    .menu a:hover {
+      color: var(--gold);
+    }
+
+    .nav-cta {
+      padding: 11px 18px;
+      border-radius: 999px;
+      background: var(--white);
+      color: #000 !important;
+    }
+
+    .hero {
+      min-height: 100vh;
+      padding: 150px 0 85px;
+      display: flex;
+      align-items: center;
+      background:
+        radial-gradient(circle at 75% 20%, rgba(212, 175, 55, 0.20), transparent 32%),
+        linear-gradient(90deg, rgba(0,0,0,.82), rgba(0,0,0,.58), rgba(0,0,0,.86)),
+        url("imagenes/hero.jpg") center/cover no-repeat;
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.1fr 0.9fr;
+      gap: 44px;
+      align-items: center;
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      color: var(--gold);
+      font-size: 12px;
+      font-weight: 900;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      margin-bottom: 22px;
+    }
+
+    .eyebrow::before {
+      content: "";
+      width: 36px;
+      height: 2px;
+      background: var(--gold);
+      display: inline-block;
+    }
+
+    h1 {
+      font-size: clamp(48px, 8vw, 104px);
+      line-height: 0.92;
+      letter-spacing: -4px;
+      font-weight: 900;
+      margin-bottom: 26px;
+    }
+
+    .hero p {
+      max-width: 620px;
+      font-size: clamp(17px, 2vw, 22px);
+      color: #dedede;
+      line-height: 1.7;
+      margin-bottom: 34px;
+    }
+
+    .hero-actions,
+    .pagos {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      flex-wrap: wrap;
+    }
+
+    .btn,
+    .pago,
+    button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 999px;
+      padding: 15px 25px;
+      border: 2px solid var(--white);
+      background: var(--white);
+      color: #000;
+      font-family: inherit;
+      font-weight: 900;
+      font-size: 13px;
+      letter-spacing: 0.4px;
+      text-transform: uppercase;
+      cursor: pointer;
+      transition: 0.3s ease;
+    }
+
+    .btn:hover,
+    .pago:hover,
+    button:hover {
+      transform: translateY(-3px);
+      background: var(--gold);
+      border-color: var(--gold);
+      box-shadow: 0 16px 35px rgba(212, 175, 55, 0.22);
+    }
+
+    .btn-outline {
+      background: transparent;
+      color: var(--white);
+    }
+
+    .btn-outline:hover {
+      color: #000;
+    }
+
+        .hero-card {
+      background: linear-gradient(180deg, rgba(255,255,255,.10), rgba(255,255,255,.04));
+      border: 1px solid var(--line);
+      border-radius: 34px;
+      padding: 32px;
+      box-shadow: var(--shadow);
+      backdrop-filter: blur(12px);
+    }
+
+    .hero-card h3 {
+      font-size: 28px;
+      margin-bottom: 15px;
+    }
+
+    .hero-card p {
+      font-size: 15px;
+      color: var(--soft);
+      margin-bottom: 22px;
+    }
+
+    .stats {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 12px;
+    }
+
+    .stat {
+      padding: 18px 12px;
+      border-radius: 20px;
+      background: rgba(255,255,255,.06);
+      border: 1px solid var(--line);
+      text-align: center;
+    }
+
+    .stat strong {
+      display: block;
+      color: var(--gold);
+      font-size: 22px;
+      margin-bottom: 4px;
+    }
+
+    .stat span {
+      color: var(--muted);
+      font-size: 11px;
+      font-weight: 800;
+      text-transform: uppercase;
+    }
+
+    section {
+      scroll-margin-top: 100px;
+    }
+
+    .section {
+      padding: 105px 0;
+      text-align: center;
+    }
+
+    .section-dark {
+      background: var(--dark);
+    }
+
+    .section h2 {
+      font-size: clamp(34px, 5vw, 62px);
+      line-height: 1.08;
+      letter-spacing: -2px;
+      margin-bottom: 20px;
+    }
+
+    .section-text {
+      max-width: 760px;
+      margin: 0 auto;
+      color: var(--soft);
+      line-height: 1.85;
+      font-size: 18px;
+    }
+
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 26px;
+      margin-top: 52px;
+    }
+
+    .card,
+    .producto {
+      background: linear-gradient(180deg, var(--card-2), var(--card));
+      border: 1px solid var(--line);
+      border-radius: 28px;
+      overflow: hidden;
+      box-shadow: var(--shadow);
+      transition: 0.35s ease;
+      text-align: left;
+    }
+
+    .card:hover,
+    .producto:hover {
+      transform: translateY(-8px);
+      border-color: rgba(212, 175, 55, 0.55);
+      box-shadow: 0 25px 85px rgba(212, 175, 55, 0.12);
+    }
+
+    .card img,
+    .producto img {
+      height: 330px;
+      object-fit: cover;
+      background: #202020;
+    }
+
+    .card-body,
+    .producto-body {
+      padding: 26px;
+    }
+
+    .card h3,
+    .producto h3 {
+      font-size: 25px;
+      margin-bottom: 12px;
+    }
+
+    .card p,
+    .producto p {
+      color: #adadad;
+      line-height: 1.65;
+      margin-bottom: 22px;
+    }
+
+    .drop {
+      padding: 98px 0;
+      background:
+        radial-gradient(circle at top, rgba(212, 175, 55, 0.18), transparent 38%),
+        linear-gradient(135deg, #111, #030303);
+      text-align: center;
+      border-top: 1px solid var(--line);
+      border-bottom: 1px solid var(--line);
+    }
+
+    .drop h2 {
+      font-size: clamp(36px, 6vw, 72px);
+      letter-spacing: -2px;
+      margin: 14px 0;
+    }
+
+    .drop p {
+      color: var(--soft);
+      font-size: 18px;
+    }
+
+    #contador {
+      margin-top: 28px;
+      color: var(--gold);
+      font-size: clamp(28px, 4vw, 44px);
+      font-weight: 900;
+    }
+
+    .productos-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 26px;
+      margin-top: 52px;
+    }
+
+    .producto img {
+      height: 285px;
+    }
+
+    .precio {
+      color: var(--gold);
+      font-weight: 900;
+      font-size: 22px;
+      margin-bottom: 18px;
+    }
+
+    .producto .pagos {
+      justify-content: flex-start;
+    }
+
+    .pago {
+      min-width: 136px;
+      padding: 12px 16px;
+      font-size: 12px;
+      text-align: center;
+    }
+
+    .apartados-box {
+      max-width: 900px;
+      margin: 0 auto;
+      background:
+        linear-gradient(180deg, rgba(255,255,255,.08), rgba(255,255,255,.03));
+      border: 1px solid var(--line);
+      border-radius: 34px;
+      padding: 52px 36px;
+      box-shadow: var(--shadow);
+    }
+
+    .apartados .pagos {
+      justify-content: center;
+      margin-top: 32px;
+    }
+
+    .apartados .pago {
+      font-size: 14px;
+      padding: 15px 26px;
+    }
+
+        .registro {
+      background:
+        radial-gradient(circle at 50% 0%, rgba(212, 175, 55, 0.12), transparent 34%),
+        var(--dark);
+    }
+
+    form {
+      width: min(620px, 100%);
+      margin: 38px auto 0;
+      display: grid;
+      gap: 14px;
+      padding: 24px;
+      border-radius: 30px;
+      background: rgba(255,255,255,.045);
+      border: 1px solid var(--line);
+      box-shadow: var(--shadow);
+    }
+
+    input,
+    select,
+    textarea {
+      width: 100%;
+      padding: 17px 18px;
+      border-radius: 17px;
+      border: 1px solid rgba(255,255,255,.13);
+      background: #050505;
+      color: var(--white);
+      font-family: inherit;
+      font-size: 15px;
+      outline: none;
+      transition: 0.3s ease;
+    }
+
+    textarea {
+      resize: vertical;
+      min-height: 118px;
+    }
+
+    input::placeholder,
+    textarea::placeholder {
+      color: #777;
+    }
+
+    input:focus,
+    select:focus,
+    textarea:focus {
+      border-color: var(--gold);
+      box-shadow: 0 0 0 4px rgba(212, 175, 55, 0.16);
+    }
+
+    form button {
+      width: 100%;
+      margin-top: 4px;
+    }
+
+    .whatsapp {
+      position: fixed;
+      right: 22px;
+      bottom: 22px;
+      width: 64px;
+      height: 64px;
+      border-radius: 50%;
+      background: #25D366;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 1001;
+      box-shadow: 0 16px 40px rgba(37, 211, 102, 0.32);
+      transition: 0.3s ease;
+    }
+
+    .whatsapp:hover {
+      transform: scale(1.08);
+    }
+
+    .whatsapp svg {
+      width: 35px;
+      height: 35px;
+      fill: #fff;
+    }
+
+    footer {
+      padding: 38px 0;
+      text-align: center;
+      color: #777;
+      font-size: 14px;
+      background: #020202;
+      border-top: 1px solid var(--line);
+    }
+
+    @media (max-width: 900px) {
+      .hero-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .hero-card {
+        max-width: 560px;
+      }
+
+      .cards {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .navbar {
+        padding: 14px 0;
+      }
+
+      .nav-inner {
+        flex-direction: column;
+        gap: 13px;
+      }
+
+      .logo img {
+        width: 42px;
+        height: 42px;
+      }
+
+      .logo span {
+        font-size: 18px;
+      }
+
+      .menu {
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 12px;
+      }
+
+      .menu a {
+        font-size: 10px;
+      }
+
+      .nav-cta {
+        padding: 8px 12px;
+      }
+
+      .hero {
+        padding: 190px 0 70px;
+        text-align: center;
+      }
+
+      .eyebrow {
+        justify-content: center;
+      }
+
+      .eyebrow::before {
+        display: none;
+      }
+
+      h1 {
+        font-size: 48px;
+        letter-spacing: -2px;
+      }
+
+      .hero-actions,
+      .pagos,
+      .producto .pagos {
+        justify-content: center;
+        flex-direction: column;
+      }
+
+      .btn,
+      .pago {
+        width: 100%;
+        max-width: 285px;
+      }
+
+      .stats {
+        grid-template-columns: 1fr;
+      }
+
+      .section,
+      .drop {
+        padding: 78px 0;
+      }
+
+      .section-text {
+        font-size: 16px;
+      }
+
+      .apartados-box {
+        padding: 38px 22px;
+      }
+
+      form {
+        padding: 18px;
+      }
+
+      .whatsapp {
+        width: 58px;
+        height: 58px;
+        right: 18px;
+        bottom: 18px;
+      }
+    }
+  </style>
 </head>
 
 <body>
 
-  <header class="hero">
-
-
-    <nav class="navbar">
-   <div class="logo">
-    <img src="imagenes/logo-simbolo.png" alt="Salazar">
-    <span>SALAZAR</span>
-</div>
+      <nav class="navbar">
+    <div class="nav-inner">
+      <a class="logo" href="#inicio">
+        <img src="imagenes/logo-simbolo.png" alt="Logo SALAZAR">
+        <span>SALAZAR</span>
+      </a>
 
       <ul class="menu">
         <li><a href="#historia">Historia</a></li>
-        <li><a href="#coleccion">Colección</a></li>
-        <li><a href="#registro">Acceso</a></li>
+        <li><a href="#colecciones">Colecciones</a></li>
+        <li><a href="#productos">Mundial</a></li>
+        <li><a href="#registro" class="nav-cta">Registro</a></li>
       </ul>
-    </nav>
-
-    <div class="hero-content">
-      <span class="tagline">NUEVA COLECCIÓN 2026</span>
-
-      <h1>
-        NO SEGUIMOS<br>
-        TENDENCIAS
-      </h1>
-
-      <p>
-        Creamos identidad para quienes construyen algo grande.
-      </p>
-
-      <a href="#registro" class="btn">ACCESO ANTICIPADO</a>
     </div>
+  </nav>
 
+  <header class="hero" id="inicio">
+    <div class="container hero-grid">
+
+      <div>
+        <span class="eyebrow">Nueva colección 2026</span>
+
+        <h1>
+          NO SEGUIMOS<br>
+          TENDENCIAS
+        </h1>
+
+        <p>
+          Sudaderas premium para quienes construyen identidad propia.
+          Diseño limpio, bordado de calidad y presencia urbana.
+        </p>
+
+        <div class="hero-actions">
+          <a href="#productos" class="btn">
+            Ver colección
+          </a>
+
+          <a href="#apartados" class="btn btn-outline">
+            Apartar ahora
+          </a>
+        </div>
+      </div>
+
+      <div class="hero-card">
+        <h3>Colección de la SELECCION MEXICANA</h3>
+
+        <p>
+          Una edición limitada inspirada en la SELECCION MEXICANA.
+          Diseñada para destacar sin perder elegancia.
+        </p>
+
+        <div class="stats">
+
+          <div class="stat">
+            <strong>3</strong>
+            <span>Diseños</span>
+          </div>
+
+          <div class="stat">
+            <strong>4</strong>
+            <span>Por modelo</span>
+          </div>
+
+          <div class="stat">
+            <strong>2026</strong>
+            <span>Drop</span>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
   </header>
 
-  <section id="historia" class="section historia">
-    <span class="section-tag">NUESTRA ESENCIA</span>
-    <h2>Salazar nace para quienes no copian el camino.</h2>
-    <p>
-      Una marca urbana enfocada en identidad, presencia y diseño minimalista.
-      Cada pieza representa seguridad, disciplina y visión.
-    </p>
-  </section>
+  <section id="historia" class="section section-dark">
+    <div class="container">
 
-  <section id="coleccion" class="section coleccion">
-    <span class="section-tag">DROP 01</span>
-    <h2>Colección en desarrollo</h2>
+      <span class="eyebrow">Nuestra esencia</span>
 
-    <div class="cards">
-      <div class="card">
-        <div class="card-img"></div>
-        <h3>Camiseta Essential</h3>
-        <p>Próximamente</p>
-      </div>
+      <h2>
+        Salazar nace para quienes no copian el camino.
+      </h2>
 
-      <div class="card">
-        <div class="card-img"></div>
-        <h3>Hoodie Identity</h3>
-        <p>Próximamente</p>
-      </div>
+      <p class="section-text">
+        Una marca urbana enfocada en identidad,
+        presencia y diseño minimalista.
+        Cada pieza representa seguridad,
+        disciplina y visión.
+      </p>
 
-      <div class="card">
-        <div class="card-img"></div>
-        <h3>Gorra Signature</h3>
-        <p>Próximamente</p>
-      </div>
     </div>
   </section>
 
-  <section class="estreno">
-    <h2>🔥 Estreno 16 de Junio 2026</h2>
-    <p>Primera colección limitada Mundial 2026</p>
-    <p>Solo 2 piezas disponibles por diseño.</p>
-</section>
+  <section id="colecciones" class="section">
+    <div class="container">
 
-<section class="lanzamiento">
-    <p class="etiqueta">Estreno oficial · 16 de junio 2026</p>
-    <h2>Colección Mundial 2026</h2>
-    <p class="texto-lanzamiento">Primera colección limitada: solo 2 piezas por diseño.</p>
-    <h3 id="contador"></h3>
-</section>
+      <span class="eyebrow">Colecciones</span>
 
-<section class="coleccion-mundial">
-    <div class="grid-coleccion">
+      <h2>
+        Tres colecciones. Una identidad.
+      </h2>
 
-        <div class="card-producto">
-            <img src="imagenes/foto1.jpg" alt="Sudadera Argentina">
-            <h3>Argentina</h3>
-            <p>Sudadera premium</p>
-        </div>
+      <p class="section-text">
+        Cada línea tiene una intención distinta,
+        pero todas comparten la misma esencia:
+        prendas limpias, fuertes y memorables.
+      </p>
 
-        <div class="card-producto">
-            <img src="imagenes/foto2.jpg" alt="Sudadera Brasil">
-            <h3>Brasil</h3>
-            <p>Sudadera premium</p>
-        </div>
+      <div class="cards">
 
-        <div class="card-producto">
-            <img src="imagenes/foto3.jpg" alt="Sudadera México">
+        <article class="card">
+          <img src="imagenes/seleccion mexicana.jpg" alt="Colección del Mundial">
+
+          <div class="card-body">
+            <h3>SELECCION MEXICANA</h3>
+
+            <p>
+              Sudaderas premium inspirada en la SELECCION
+              MEXICANA. Ediccion limitada.
+            </p>
+
+            <a href="#productos" class="btn">
+              Ver colección
+            </a>
+          </div>
+        </article>
+
+        <article class="card">
+          <img src="imagenes/classic.jpg" alt="Colección Classic">
+
+          <div class="card-body">
+            <h3>Classic</h3>
+
+            <p>
+              Prendas minimalistas,
+              limpias y atemporales.
+            </p>
+
+            <a href="#registro" class="btn">
+              Quiero acceso
+            </a>
+          </div>
+        </article>
+
+        <article class="card">
+          <img src="imagenes/limited.jpg" alt="Colección Limited">
+
+          <div class="card-body">
+            <h3>Limited</h3>
+
+            <p>
+              Drops exclusivos con pocas piezas
+              disponibles por diseño.
+            </p>
+
+            <a href="#apartados" class="btn">
+              Apartar lugar
+            </a>
+          </div>
+        </article>
+
+      </div>
+
+    </div>
+  </section>
+
+  <section class="drop">
+    <div class="container">
+
+      <span class="eyebrow">
+        Estreno oficial · 01 DE JULIO.
+      </span>
+
+      <h2>COLECCION DE LA SELECCION MEXICANA</h2>
+
+      <p>
+        Primera colección limitada:
+        solo 4 piezas por
+      </p>
+
+      <h3 id="contador">
+        Cargando contador...
+      </h3>
+
+    </div>
+  </section>
+
+    <section id="productos" class="section">
+    <div class="container">
+
+      <span class="eyebrow">Mundial 2026</span>
+
+      <h2>Sudaderas disponibles</h2>
+
+      <p class="section-text">
+        Aparta tu pieza con anticipo o realiza
+        el pago completo directamente.
+      </p>
+
+      <div class="productos-grid">
+
+        <article class="producto">
+          <img src="imagenes/foto1.jpg" alt="Sudadera verde">
+
+          <div class="producto-body">
+            <h3>MEXICO</h3>
+            <p>Sudadera premium estampada</p>
+
+            <div class="precio">$300 MXN </div>
+
+            <div class="pagos">
+              <a class="pago"
+                 href="https://mpago.la/1ai9DB8"
+                 target="_blank"
+                 rel="noopener noreferrer">
+                 Anticipo
+              </a>
+
+              <a class="pago"
+                 href="https://mpago.la/1t1pBKN"
+                 target="_blank"
+                 rel="noopener noreferrer">
+                 Pago completo
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <article class="producto">
+          <img src="imagenes/foto2.jpg" alt="Sudadera Blanca">
+
+          <div class="producto-body">
+            <h3>MEXICO</h3>
+            <p>Sudadera premium estampada.</p>
+
+            <div class="precio">$300 MXN</div>
+
+            <div class="pagos">
+              <a class="pago"
+                 href="https://mpago.la/1ai9DB8"
+                 target="_blank"
+                 rel="noopener noreferrer">
+                 Anticipo
+              </a>
+
+              <a class="pago"
+                 href="https://mpago.la/1t1pBKN"
+                 target="_blank"
+                 rel="noopener noreferrer">
+                 Pago completo
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <article class="producto">
+          <img src="imagenes/foto3.jpg" alt="Sudadera México">
+
+          <div class="producto-body">
             <h3>México</h3>
-            <p>Sudadera premium</p>
-        </div>
+            <p>Sudadera premium estampada</p>
 
-        <div class="card-producto">
-            <img src="imagenes/foto4.jpg" alt="Sudadera Portugal">
-            <h3>Portugal</h3>
-            <p>Sudadera premium</p>
-        </div>
+            <div class="precio">$300 MXN</div>
 
-        <div class="card-producto">
-            <img src="imagenes/foto5.jpg" alt="Sudadera Francia">
-            <h3>Francia</h3>
-            <p>Sudadera premium</p>
-        </div>
+            <div class="pagos">
+              <a class="pago"
+                 href="https://mpago.la/1ai9DB8"
+                 target="_blank"
+                 rel="noopener noreferrer">
+                 Anticipo
+              </a>
+
+              <a class="pago"
+                 href="https://mpago.la/1t1pBKN"
+                 target="_blank"
+                 rel="noopener noreferrer">
+                 Pago completo
+              </a>
+            </div>
+          </div>
+        </article>
+
+      </div>
 
     </div>
-</section>
-
-  <section id="registro" class="registro">
-    <h2>Acceso anticipado</h2>
-    <p>Sé de los primeros en conocer la coleccion del Mundial</p>
-
-    <form>
-      <input type="email" placeholder="Tu correo electrónico" required>
-      <button type="submit">Unirme</button>
-    </form>
   </section>
 
-  <a href="https://wa.me/527351897788" target="_blank">
-  Escríbenos por WhatsApp
-</a>
+  <section id="apartados" class="section apartados section-dark">
+    <div class="container">
+
+      <div class="apartados-box">
+
+        <span class="eyebrow">Apartados</span>
+
+        <h2>
+          Asegura tu pieza SALAZAR
+        </h2>
+
+        <p class="section-text">
+          Puedes apartar tu sudadera con un anticipo.
+          El pago restante se liquida antes de la entrega.
+        </p>
+
+        <div class="pagos">
+          <a class="pago"
+             href="https://mpago.la/1ai9DB8"
+             target="_blank"
+             rel="noopener noreferrer">
+             🔥 Apartar ahora
+          </a>
+
+          <a class="pago"
+             href="https://mpago.la/1t1pBKN"
+             target="_blank"
+             rel="noopener noreferrer">
+             💳 Comprar ahora
+          </a>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <section id="registro" class="section registro">
+    <div class="container">
+
+      <span class="eyebrow">
+        Acceso anticipado
+      </span>
+
+      <h2>
+        Regístrate para recibir prioridad
+      </h2>
+
+      <p class="section-text">
+        Sé de los primeros en enterarte de lanzamientos,
+        apartados y drops limitados.
+      </p>
+
+      <form action="https://formsubmit.co/davidsalazar0406@gmail.com" method="POST">
+
+        <input type="hidden" name="_subject" value="Nuevo registro SALAZAR">
+        <input type="hidden" name="_captcha" value="false">
+        <input type="hidden" name="_next" value="gracias.html">
+
+        <input
+          type="text"
+          name="nombre"
+          placeholder="Nombre completo"
+          required
+        >
+
+        <input
+          type="email"
+          name="correo"
+          placeholder="Correo electrónico"
+          required
+        >
+
+        <input
+          type="tel"
+          name="telefono"
+          placeholder="WhatsApp"
+          required
+        >
+
+        <select name="coleccion" required>
+          <option value="">Colección de interés</option>
+          <option value="Mundial 2026">Mundial 2026</option>
+          <option value="Classic">Classic</option>
+          <option value="Limited">Limited</option>
+        </select>
+
+        <textarea
+          name="mensaje"
+          rows="4"
+          placeholder="Talla, modelo o diseño que te interesa">
+        </textarea>
+
+        <button type="submit">
+          Registrarme
+        </button>
+
+      </form>
+
+    </div>
+  </section>
+
+    <a
+    class="whatsapp"
+    href="https://wa.me/527351897788?text=Hola%20SALAZAR,%20quiero%20información%20sobre%20la%20colección"
+    target="_blank"
+    rel="noopener noreferrer"
+    aria-label="WhatsApp"
+  >
+    <svg viewBox="0 0 32 32">
+      <path d="M16.04 3C8.85 3 3 8.75 3 15.82c0 2.26.6 4.47 1.75 6.41L3 29l6.95-1.79a13.18 13.18 0 0 0 6.09 1.5C23.23 28.71 29 22.96 29 15.89 29 8.82 23.23 3 16.04 3zm0 23.45c-1.94 0-3.84-.52-5.5-1.5l-.39-.23-4.12 1.06 1.1-3.96-.26-.41a10.55 10.55 0 0 1-1.62-5.59c0-5.82 4.84-10.56 10.79-10.56 5.94 0 10.77 4.74 10.77 10.56 0 5.83-4.83 10.63-10.77 10.63z"/>
+    </svg>
+  </a>
 
   <footer>
-    <p>SALAZAR © 2026</p>
+    <div class="container">
+      <p>SALAZAR © 2026 · Todos los derechos reservados</p>
+    </div>
   </footer>
 
-  <script src="script.js"></script>
+  <script>
+    const fechaLanzamiento = new Date("2026-06-16T00:00:00").getTime();
+    const contador = document.getElementById("contador");
+
+    function actualizarContador() {
+      const ahora = new Date().getTime();
+      const diferencia = fechaLanzamiento - ahora;
+
+      if (diferencia <= 0) {
+        contador.innerHTML = "La colección ya está disponible.";
+        return;
+      }
+
+      const dias = Math.floor(diferencia / (1000 * 60 * 60 * 24));
+      const horas = Math.floor((diferencia / (1000 * 60 * 60)) % 24);
+      const minutos = Math.floor((diferencia / (1000 * 60)) % 60);
+      const segundos = Math.floor((diferencia / 1000) % 60);
+
+      contador.innerHTML =
+        dias + "d " +
+        horas + "h " +
+        minutos + "m " +
+        segundos + "s";
+    }
+
+    actualizarContador();
+    setInterval(actualizarContador, 1000);
+  </script>
+
 </body>
 </html>
